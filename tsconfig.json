@@ -1,20 +1,63 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noEmit": true,
     "jsx": "preserve",
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@constants": [
+        "./constants/*"
+      ],
+      "@context/*": [
+        "src/context/*"
+      ],
+      "@customHooks/*": [
+        "src/customHooks/*"
+      ],
+      "@providers/*": [
+        "src/providers/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@theme/*": [
+        "src/theme/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@public/*": [
+        "./public/*"
+      ],
+    },
+    "noFallthroughCasesInSwitch": true,
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

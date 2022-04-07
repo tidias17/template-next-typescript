@@ -1,22 +1,39 @@
 {
-  "name": "thiago-almeida-next",
+  "name": "template-next-typescript",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint src",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@types/styled-components": "^5.1.22",
+    "axios": "^0.25.0",
+    "click-management-components": "^0.1.39",
+    "humps": "^2.0.1",
     "next": "12.0.10",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-query": "^3.34.14",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "@types/node": "17.0.17",
-    "@types/react": "17.0.39",
-    "eslint": "8.8.0",
-    "eslint-config-next": "12.0.10",
-    "typescript": "4.5.5"
+    "@types/node": "^17.0.17",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "12.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5",
+    "husky": "^7.0.4"
+  },
+  "lint-staged": {
+    "**/*.{tsx, ts}": "yarn lint --fix"
   }
 }
